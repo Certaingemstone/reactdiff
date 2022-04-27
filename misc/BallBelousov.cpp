@@ -1,4 +1,5 @@
 // BallBelousov.cpp : Ball (1994) model in 2D phase plane
+// uses library built from rk4.cpp
 
 #include <iostream>
 #include <fstream>

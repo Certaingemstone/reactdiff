@@ -3,7 +3,7 @@ import csv
 import matplotlib.pyplot as plt
 import os
 
-rk4out = r"C:\Users\jade2\source\repos\rk4testclient\rk4testclient"
+rk4out = r"C:\Users\jade2\source\repos\rk4testclient\rk4testclient" # output directory
 fnames = [os.path.join(rk4out, f"{i}.csv") for i in range(1,5)]
 
 plt.figure(figsize=(8, 6), dpi=120)
@@ -17,6 +17,8 @@ for name in fnames:
             if i % 5 == 0:
                 xi.append(float(row[0]))
                 chi.append(float(row[1]))
+            if i > 360:
+                break
     plt.scatter(xi, chi)
     #plt.xlim(-0.1, 0.1)
     #plt.ylim(-0.1, 0.1)
